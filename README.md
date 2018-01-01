@@ -22,3 +22,14 @@ npm install
 ```
 
 Afterwards, run `npm run watch` to start developing.
+
+## Building
+To build for production, all you need to do is run `npm build`.
+The output directory, `build/web/` contains a `package.json` pointing to the built
+application, and can be run as follows:
+
+```bash
+cd build/web
+npm install
+npm start
+```
