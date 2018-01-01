@@ -2,11 +2,11 @@
   "name": "app",
   "version": "1.0.0",
   "description": "Build Electron apps using Dart.",
-  "main": "web/main.dart.js",
+  "main": "web/entry.js",
   "scripts": {
     "build": "pub build",
     "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
-    "start": "elecron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
