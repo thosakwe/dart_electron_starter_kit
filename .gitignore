@@ -128,5 +128,6 @@ doc/api/
 *.ddc.js
 *.ddc.js.map
 *.module
+*.sum
 web/dart_sdk.js
 packages/
