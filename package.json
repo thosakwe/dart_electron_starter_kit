@@ -5,6 +5,7 @@
   "main": "web/entry.js",
   "scripts": {
     "build": "pub build",
+    "postinstall": "dart tool/postinstall.dart",
     "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
     "start": "electron ."
   },

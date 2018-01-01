@@ -12,6 +12,13 @@ final List<BuildAction> buildActions = [
     inputs: inputs,
   ),
 
+  // Next, output the module as .ddc.js
+  new BuildAction(
+    new DevCompilerBuilder(),
+    package,
+    inputs: ['web/main.module'],
+  ),
+
   // Then, compile the entry point.
   new BuildAction(
     new DevCompilerBootstrapBuilder(),

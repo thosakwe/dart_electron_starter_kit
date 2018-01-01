@@ -125,4 +125,8 @@ doc/api/
 *.dart.bootstrap.js
 *.dart.js
 *.dart.js.map
+*.ddc.js
+*.ddc.js.map
 *.module
+web/dart_sdk.js
+packages/
