@@ -1,5 +1,5 @@
 # electron_ddc_boilerplate
-Build Electron apps using the Dart Dev Compiler. **Very experimental.**
+Build Electron apps using the Dart Dev Compiler.
 
 ![Screenshot](screenshots/main.png)
 

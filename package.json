@@ -4,7 +4,7 @@
   "description": "Build Electron apps using Dart.",
   "main": "web/entry.js",
   "scripts": {
-    "build": "pub build",
+    "build": "rimraf web/main.dart.js && pub build",
     "postinstall": "dart tool/postinstall.dart",
     "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
     "start": "electron ."
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
   "devDependencies": {
     "electron-prebuilt": "~1.4.13",
-    "parallelshell": "^3.0.2"
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "requirejs": "^2.3.5"
