@@ -17,8 +17,8 @@ Assuming you have both NPM and the Dart SDK installed, setup is simple:
 
 ```bash
 # MUST be run in this order!!!
-https://github.com/thosakwe/electron_ddc <project-name>
-cd <project-name>
+https://github.com/thosakwe/electron_ddc [project-name]
+cd [project-name]
 pub get
 npm install
 ```
