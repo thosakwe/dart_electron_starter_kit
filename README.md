@@ -1,4 +1,4 @@
-# electron_ddc_boilerplate
+# electron_ddc
 Build Electron apps using the Dart Dev Compiler.
 
 ![Screenshot](screenshots/main.png)
@@ -17,6 +17,8 @@ Assuming you have both NPM and the Dart SDK installed, setup is simple:
 
 ```bash
 # MUST be run in this order!!!
+https://github.com/thosakwe/electron_ddc <project-name>
+cd <project-name>
 pub get
 npm install
 ```
