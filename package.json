@@ -4,7 +4,8 @@
   "description": "Build Electron apps using Dart.",
   "main": "web/entry.js",
   "scripts": {
-    "build": "rimraf web/main.dart.js && pub build",
+    "build": "npm run delete-sensitive && pub build",
+    "delete-sensitive": "rimraf web/main.dart.js && rimraf web/main.ddc.js && rimraf web/main.ddc.js.map && rimraf web/main.module",
     "postinstall": "dart tool/postinstall.dart",
     "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
     "start": "electron ."

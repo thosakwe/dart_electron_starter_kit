@@ -18,11 +18,4 @@ final List<BuildAction> buildActions = [
     package,
     inputs: ['web/main.module'],
   ),
-
-  // Then, compile the entry point.
-  new BuildAction(
-    new DevCompilerBootstrapBuilder(),
-    package,
-    inputs: inputs,
-  ),
 ];
