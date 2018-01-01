@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
   "devDependencies": {
-    "electron": "1.7.10",
+    "electron-prebuilt": "~1.4.13",
     "parallelshell": "^3.0.2"
   },
   "dependencies": {
