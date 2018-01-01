@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Build Electron apps using Dart.",
+  "main": "web/main.dart.js",
+  "scripts": {
+    "build": "pub build",
+    "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
+    "start": "elecron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thosakwe/electron_ddc_boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thosakwe/electron_ddc_boilerplate/issues"
+  },
+  "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
+  "devDependencies": {
+    "electron": "1.7.10",
+    "parallelshell": "^3.0.2"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.5"
+  }
+}
