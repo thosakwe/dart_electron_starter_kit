@@ -20,12 +20,10 @@
   },
   "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
   "devDependencies": {
-    "electron-prebuilt": "~1.4.13",
     "express": "^4.16.2",
-    "parallelshell": "^3.0.2",
-    "rimraf": "^2.6.2"
+    "parallelshell": "^3.0.2"
   },
   "dependencies": {
-    "requirejs": "^2.1.17"
+    "electron": "^1.7.10"
   }
 }
