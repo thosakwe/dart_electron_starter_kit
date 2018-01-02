@@ -2,10 +2,9 @@
   "name": "app",
   "version": "1.0.0",
   "description": "Build Electron apps using Dart.",
-  "main": "web/entry.js",
+  "main": "dev_entry.js",
   "scripts": {
-    "build": "npm run delete-sensitive && pub build && rimraf build/web/dart_sdk.js",
-    "delete-sensitive": "rimraf web/main.dart.js && rimraf web/main.ddc.js && rimraf web/main.ddc.js.map && rimraf web/main.module",
+    "build": "pub build",
     "postinstall": "dart tool/postinstall.dart",
     "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
     "start": "electron ."
@@ -22,10 +21,11 @@
   "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
   "devDependencies": {
     "electron-prebuilt": "~1.4.13",
+    "express": "^4.16.2",
     "parallelshell": "^3.0.2",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "requirejs": "^2.3.5"
+    "requirejs": "^2.1.17"
   }
 }

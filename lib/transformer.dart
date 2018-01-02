@@ -11,14 +11,21 @@ class ScriptRewriterTransformer extends Transformer {
   apply(Transform transform) async {
     var contents = await transform.readInputAsString(transform.primaryInput.id);
     var doc = parse(contents);
-    doc.querySelector('script[src="main.config.js"]')?.remove();
-    var requireMain = doc.querySelector('script[src="require_main.js"]');
 
-    if (requireMain != null) {
-      var script = doc.createElement('script')
-        ..attributes['src'] = 'main.dart.js'
-        ..attributes['type'] = 'text/javascript';
-      requireMain.replaceWith(script);
+    var devScripts = doc.querySelectorAll('script[data-electron-ddc]');
+
+    for (int i = 0; i < devScripts.length; i++) {
+      if (i == 0) {
+        var script = doc.createElement('script')
+          ..attributes['src'] = 'main.dart.js'
+          ..attributes['type'] = 'text/javascript';
+        devScripts[i].replaceWith(script);
+      } else {
+        devScripts[i].remove();
+      }
+    }
+
+    if (devScripts.isNotEmpty) {
       contents = doc.outerHtml;
     }
 

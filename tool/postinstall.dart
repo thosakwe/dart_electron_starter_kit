@@ -16,11 +16,13 @@ main() async {
   } else {
     var targetFile =
         new File.fromUri(Platform.script.resolve('../web/dart_sdk.js'));
+    /*
     await sdkFile.copy(targetFile.path);
     print('Copied $sdkFile -> $targetFile');
+    */
 
     var sdkPackageDir =
-        new Directory.fromUri(targetFile.parent.uri.resolve('packages/\$sdk'));
+        new Directory.fromUri(targetFile.parent.parent.uri.resolve('packages/\$sdk'));
     if (!await sdkPackageDir.exists())
       await sdkPackageDir.create(recursive: true);
 

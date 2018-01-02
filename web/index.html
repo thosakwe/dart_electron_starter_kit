@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Electron DDC</title>
+    <script data-electron-ddc src="packages/$sdk/dev_compiler/web/dart_stack_trace_mapper.js"></script>
+    <script data-electron-ddc data-electron-require src="packages/$sdk/dev_compiler/amd/require.js"></script>
+    <script data-electron-ddc>
+        window.require = window.requirejs || window.require;
+        requirejs(['main.dart.bootstrap.js']);
+    </script>
 </head>
 <body>
-<script src="../node_modules/requirejs/require.js"></script>
-<script src="require_main.js"></script>
 </body>
 </html>

@@ -3,8 +3,9 @@ import 'build_actions.dart';
 
 main() async {
   await watch(
-    await buildActions(),
+    createBuildActions(packageGraph, builderApplications),
     deleteFilesByDefault: true,
     writeToCache: true,
+    enableLowResourcesMode: true,
   );
 }
