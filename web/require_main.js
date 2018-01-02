@@ -1,4 +1,9 @@
-requirejs(['main.ddc'], function (app) {
+requirejs.config({
+    paths: {
+        'packages/app': '../.dart_tool/build/generated/app'
+    }
+});
+requirejs(['packages/app/web/main.config', 'packages/app/web/main.ddc'], function (_, app) {
     app.main.main();
 }, function(err) {
     console.error(err);

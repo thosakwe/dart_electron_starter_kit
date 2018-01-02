@@ -11,7 +11,8 @@ class ScriptRewriterTransformer extends Transformer {
   apply(Transform transform) async {
     var contents = await transform.readInputAsString(transform.primaryInput.id);
     var doc = parse(contents);
-    var requireMain = doc.querySelector('[data-main="require_main"]');
+    doc.querySelector('script[src="main.config.js"]')?.remove();
+    var requireMain = doc.querySelector('script[src="require_main.js"]');
 
     if (requireMain != null) {
       var script = doc.createElement('script')
