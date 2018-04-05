@@ -4,10 +4,8 @@ Build Electron apps using the Dart Dev Compiler.
 ![Screenshot](screenshots/main.png)
 
 ## About
-This package uses `package:build_web_compilers` and the DDC to compile a Dart app to JS on-the-fly,
-without having to go through `pub serve`. 
-
-`package:build`'s design gives this a much faster edit-refresh cycle than serving via `pub serve`.
+This package uses `package:build_web_compilers` and the DDC to compile a Dart app to JS on-the-fly.
+Now, thanks to the recent changes to `package:build_runner`, this allows for incremental builds.
 
 Now, you can write your Electron app with Dart, leveraging exist interop libraries like
 `package:node` and `package:electron`.
@@ -16,8 +14,7 @@ Now, you can write your Electron app with Dart, leveraging exist interop librari
 Assuming you have both NPM and the Dart SDK installed, setup is simple:
 
 ```bash
-# MUST be run in this order!!!
-https://github.com/thosakwe/electron_ddc [project-name]
+git clone https://github.com/thosakwe/electron_ddc [project-name]
 cd [project-name]
 pub get
 npm install
