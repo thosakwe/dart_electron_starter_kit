@@ -20,7 +20,7 @@ pub get
 npm install
 ```
 
-Afterwards, run `npm run watch` to start developing.
+Afterwards, run `npm run dev` to start developing.
 
 ## Building
 To build for production, all you need to do is run `npm build`.

@@ -5,7 +5,7 @@
   "main": "dev_entry.js",
   "scripts": {
     "build": "pub run build_runner build --config=release -o build",
-    "watch": "parallelshell \"pub run build_runner serve\" \"npm start\"",
+    "dev": "parallelshell \"pub run build_runner serve\" \"npm start\"",
     "start": "electron ."
   },
   "repository": {
