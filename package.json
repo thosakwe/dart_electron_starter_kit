@@ -5,7 +5,6 @@
   "main": "dev_entry.js",
   "scripts": {
     "build": "pub build",
-    "postinstall": "dart tool/postinstall.dart",
     "watch": "parallelshell \"pub run build_runner serve\" \"npm start\"",
     "start": "electron ."
   },
