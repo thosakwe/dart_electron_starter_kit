@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pub build",
     "postinstall": "dart tool/postinstall.dart",
-    "watch": "parallelshell \"dart tool/watch.dart\" \"npm start\"",
+    "watch": "parallelshell \"pub run build_runner serve\" \"npm start\"",
     "start": "electron ."
   },
   "repository": {
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/thosakwe/electron_ddc_boilerplate#readme",
   "devDependencies": {
-    "express": "^4.16.2",
     "parallelshell": "^3.0.2"
   },
   "dependencies": {
