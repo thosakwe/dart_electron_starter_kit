@@ -3,7 +3,6 @@ publish_to: none
 environment:
   sdk: ">=2.0.0-dev <=2.0.0"
 dependencies:
-  electron: ^0.0.3
   string_scanner: ^1.0.0
 dev_dependencies:
   build_runner: ^0.8.0
