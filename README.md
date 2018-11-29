@@ -1,20 +1,15 @@
-# electron_ddc
-Build Electron apps using the Dart Dev Compiler.
+# dart_electron_starter_kit
+Boilerplate project for building Electron apps with Dart.
+This starter kit is minimal, and only contains what you need to get started
+right away.
 
 ![Screenshot](screenshots/main.png)
 
-## About
-This package uses `package:build_web_compilers` and the DDC to compile a Dart app to JS on-the-fly.
-Now, thanks to the recent changes to `package:build_runner`, this allows for incremental builds.
-
-Now, you can write your Electron app with Dart, leveraging exist interop libraries like
-`package:node` and `package:electron`.
-
 ## Setup
-Assuming you have both NPM and the Dart SDK installed, setup is simple:
+Assuming you have both `npm` (or `yarn`) and the Dart SDK installed, setup is simple:
 
 ```bash
-git clone https://github.com/thosakwe/electron_ddc [project-name]
+git clone https://github.com/thosakwe/dart_electron_starter_kit [project-name]
 cd [project-name]
 pub get
 npm install
@@ -22,8 +17,17 @@ npm install
 
 Afterwards, run `npm run dev` to start developing.
 
-## Building
-To build for production, all you need to do is run `npm build`.
+## Development
+This package uses `package:build_web_compilers` and the Dart Dev Compiler to compile a Dart app to JS on-the-fly.
+Thanks to, `package:build_runner`, this allows for incremental builds, **and**
+[hot-reloading](https://github.com/dart-lang/build/blob/master/docs/hot_module_reloading.md).
+
+Now, you can write your Electron app with Dart, leveraging existing JS interop libraries, and, of course,
+other Dart packages.
+ 
+## Release
+To build for production, first run `npm run build` (or `yarn build`).
+
 The output directory, `build/web/` contains a `package.json` pointing to the built
 application, and can be run as follows:
 
@@ -32,3 +36,10 @@ cd build/web
 npm install
 npm start
 ```
+
+### Packaging
+The output directory's package manifest, `build/web/package.json`, includes
+[`electron-packager`](https://github.com/electron-userland/electron-packager),
+and therefore can be packaged for distribution on Windows, MacOS, and Linux.
+
+Just run `npm run package`.

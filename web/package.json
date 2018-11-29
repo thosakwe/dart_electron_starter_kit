@@ -1,11 +1,16 @@
 {
   "name": "app",
+  "productName": "Your Product Name Here",
   "version": "1.0.0",
   "main": "entry.js",
   "scripts": {
+    "package": "electron-packager . --all",
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^1.8.4"
+    "electron": "^1.7.10"
+  },
+  "devDependencies": {
+    "electron-packager": "^12.2.0"
   }
 }
