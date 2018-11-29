@@ -42,4 +42,5 @@ The output directory's package manifest, `build/web/package.json`, includes
 [`electron-packager`](https://github.com/electron-userland/electron-packager),
 and therefore can be packaged for distribution on Windows, MacOS, and Linux.
 
-Just run `npm run package`.
+Just run `npm run build` in `build/web` to build for the host platform.
+To build for *all* platforms, run `npm run package`.
