@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "main": "entry.js",
   "scripts": {
-    "package": "electron-packager . --all",
+    "build": "electron-packager . --icon icon",
+    "package": "electron-packager . --all --icon icon",
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^1.7.10"
+    "electron": "^1.8.8"
   },
   "devDependencies": {
     "electron-packager": "^12.2.0"

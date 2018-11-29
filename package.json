@@ -4,17 +4,17 @@
   "description": "Build Electron apps using Dart.",
   "main": "dev_entry.js",
   "scripts": {
-    "build": "pub run build_runner build --config=release -o build",
-    "build_dev": "pub run build_runner build",
+    "build": "npm run icons && pub run build_runner build --config=release -o build",
     "build_runner_serve": "pub run build_runner serve --hot-reload",
-    "dev": "run-s \"build_dev\" \"serve\"",
-    "serve": "run-p \"build_runner_serve\" \"start\"",
+    "dev": "run-p \"build_runner_serve\" \"start\"",
+    "icons": "png2icons web/icon.png web/icon -allp -bc -i",
     "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^1.8.8",
+    "png2icons": "^1.0.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"
-  },
-  "dependencies": {
-    "electron": "^1.7.10"
   }
 }

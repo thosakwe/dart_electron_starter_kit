@@ -9,5 +9,5 @@ targets:
           dart2js_args:
             - --fast-startup
             - --minify
-            - --trust-type-annotations
+            - --omit-implicit-checks
             - --trust-primitives
